@@ -1,0 +1,114 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    /* overflow: auto; */
+}
+
+#root{
+    display:flex;
+    flex-direction: column;
+    gap:6rem;
+}
+
+.header{
+    display: flex;
+    height:4rem;
+    justify-content: space-around;
+    border-bottom: 1px solid rgba(36, 35, 35, 0.088);
+    
+}
+
+.header .logo{
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.header .logo img{
+max-height:100%;
+max-width:4rem;
+object-fit:cover;
+}
+
+.header .navbar{
+width:50%;
+/* border:2px solid black; */
+
+}
+
+.navbar ul{
+display:flex;
+justify-content: space-between;
+align-items: center;
+height:100%;
+list-style: none;
+}
+
+.navbar ul li{
+font-size:25px;
+}
+
+
+.searchBar{
+    display:flex;
+    justify-content: center;
+    gap:20px;
+}
+
+.searchBar input{
+width:300px;
+font-size:18px;
+padding:3px 6px;
+}
+
+.searchBar button{
+font-size:18px;
+padding:3px 6px;
+color:white;
+background:black;
+border:none;
+border-radius: 6px;;
+}
+
+
+.resContainer{
+display:flex;
+flex-wrap: wrap;
+width:80%;
+justify-content: center;
+margin: auto;
+gap:3rem;
+/* border: 2px solid black; */
+margin-bottom:100px;
+
+}
+
+.resContainer .resCard{
+border:1px solid rgba(41, 40, 40, 0.131);
+width: 280px;
+display: flex;
+flex-direction: column;
+gap:4px;
+align-items: center;
+/* overflow: -moz-hidden-unscrollable; */
+/* overflow: hidden; */
+}
+
+.resCard img{
+width:100%;
+
+}
+
+.resCard h1{
+font-size: 30px;
+text-align:center;
+}
+.resCard h2{
+width:100%;
+text-align:center;
+font-size: 20px;
+
+}

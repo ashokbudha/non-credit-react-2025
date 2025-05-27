@@ -1,0 +1,18 @@
+{
+  "name": "ep03",
+  "version": "1.0.0",
+
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Ashok Budha",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "parcel": "^2.15.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}
