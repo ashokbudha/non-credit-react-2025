@@ -1,50 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-const Header = () =>{
-    return(
-        <header className="header">
-            <div className="logo">
-                <img src="https://i.pinimg.com/originals/8d/6f/2e/8d6f2ef7011efd5da9fc154e01b83d3d.png" alt="logo" />
-            </div>
-            <nav className="navbar">
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>Cart</li>
-                    <li>Contact</li>
-                </ul>
-            </nav>
-        </header>
-    )
-}
-
-const SearchBar = () => {
-    return(
-        <div className="searchBar">
-            <input type="search" placeholder="Search a Restaurant or Food." />
-            <button>Search</button>
-        </div>
-    );
-}
-
-
-
-const ResCard = (props) =>{
-    const {resData} = props;
-    const {name, deliveryTime, costForTwo, cloudinaryImageId, cuisines, avgRating} = resData?.data;
-
-    return(
-        <div className="resCard">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGghgJ7esaJXoexEm6ZByIDnmz_K5Uz3bTgQ&s" alt="image" />
-            <h1 className="name">{name}</h1>
-            <h2 className="cuisines">{cuisines.join(", ")}</h2>
-            <h2 className="avgRating">{avgRating}</h2>
-
-        </div>
-    )
-}
 const resList = [
     {
       type: "restaurant",
@@ -1930,30 +1883,5 @@ const resList = [
     },
   ];
 
-const ResContainer = () =>{
-    return(
-        <div className="resContainer">
 
-            {resList.map((item) =>{
-                return(<ResCard key={item.data.id} resData={item}/>);
-            })}
-
-        </div>
-    );
-    
-}
-
-
-
-const App = ()=> {
-    return (
-        <>
-            <Header/>
-            <SearchBar/>
-            <ResContainer/>
-        </>
-    )
-}
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App/>);
+export default resList;
