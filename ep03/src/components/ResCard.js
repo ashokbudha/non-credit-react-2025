@@ -1,7 +1,7 @@
 import { RES_URL } from "../utils/constants";
 const ResCard = (props) =>{
     const {resData} = props;
-    const {name, deliveryTime, costForTwo, cloudinaryImageId, cuisines, avgRating} = resData?.data;
+    const {name, deliveryTime, costForTwo, cloudinaryImageId, cuisines, avgRating} = resData?.info;
 
     return(
         <div className="resCard">

@@ -1,6 +1,5 @@
 // import resList from "../utils/mockdata";
 import ResCard from "./ResCard";
-import { useState } from "react";
 
 const ResContainer = (props) =>{
     const {resList} = props;
@@ -8,7 +7,7 @@ const ResContainer = (props) =>{
         <div className="resContainer">
 
             {resList.map((item) =>{
-                return(<ResCard key={item.data.id} resData={item}/>);
+                return(<ResCard key={item.info.id} resData={item}/>);
             })}
 
         </div>

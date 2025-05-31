@@ -1,7 +1,7 @@
 import ResContainer from "./ResContainer";
+import { SWIGGY_API } from "../utils/constants";
 
-import resList from "../utils/mockdata";
-import { useState } from "react";
+import { useState ,useEffect} from "react";
 
 function filterList(searchText,listOfRestaurants){
     const data = listOfRestaurants.filter(res => res.data.name.includes(searchText));
@@ -9,8 +9,27 @@ function filterList(searchText,listOfRestaurants){
 }
 
 const Body = () =>{
-    const [listOfRestaurants, SetListOfRestaurants] = useState(resList);
+    const [listOfRestaurants, SetListOfRestaurants] = useState([]);
     const [searchText,SetSearchText] = useState("");
+     
+    useEffect(()=>{
+        fetchData();
+    },[]);
+
+    async function fetchData() {
+        const res = await fetch(SWIGGY_API);
+        const json = await res.json();
+        SetListOfRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        // console.log("Data of Swiggy Api is given below:-\n")
+        // console.log(listOfRestaurants);
+        
+    }
+
+
+if(listOfRestaurants.length ===0){
+    return(<h1><center>Loading Page</center></h1>
+    )
+}
 
 return(
     <>
